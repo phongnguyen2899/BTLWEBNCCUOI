@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderFooterAdmin.master.cs" Inherits="BTL_WEB.ADMIN.HeaderFooterAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../CSS/reponsive.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet" />
+    <link href="../Accset/accset/font/fontawesome-free-5.15.2-web/fontawesome-free-5.15.2-web/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="./accset/font/fontawesome-free-5.15.2-web/fontawesome-free-5.15.2-web/css/all.min.css">
+	<style>
+		.user{
+			position:relative;
+		}
+		
+		.user:hover .modal{
+			display:block;
+		}
+		.modal{
+			position:absolute;
+			right:0;
+			width:100px;
+			top:25px;
+			display:none
+		}
+		.modal ul{
+			width:100%;
+			background:#343a40;
+			color:white;
+		}
+		.modal ul li{
+			list-style:none;
+			padding-top:10px;
+		}
+		.modal ul li a{
+			color:white;
+			text-decoration:none;
+		}
+		.modal::before{
+			top: -15px;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 20px;
+}
+	</style>
+</head>
+<body>
+    <div class="app">
+		<div class="header">
+			<div class="header_logo">
+				<h3>Send Mail</h3>
+			</div>
+			<div class="header-action">
+				<div class="header-action_search">
+					<input class="search_input" type="text" name="" placeholder="Search for...">
+					<button class="btn_search">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
+				<div class="user" id="modaluser">
+					<a href="#" class="user-action">
+						<i class="fas fa-user"></i>
+					</a>
+					<div class="modal">
+						<ul>
+							<li>Admin</li>
+							<li>
+								<a href="Dangnhap.aspx?thaotac=dangxuat" >Đăng Xuất</a>
+							</li>
+							<li>a</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="nav">
+				<div class="nav-item">
+					<label class="nav-item-lable">Quản lý tin</label>
+					<div class="nav-item-list">
+						<a href="Danhmuctin.aspx">
+							<i class="fas fa-layer-group icon-item"></i>
+							Danh mục tin</a>
+						<a href="/ADMIN/Index.aspx">
+							<i class="fas fa-newspaper icon-item"></i>
+						Tin tức</a>
+					</div>	
+				</div>
+			</div>
+			<div class="wrapper">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+				
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>
+<script>
+	var modaluser = document.getElementById('modaluser');
+	console.log(modaluser)
+
+</script>

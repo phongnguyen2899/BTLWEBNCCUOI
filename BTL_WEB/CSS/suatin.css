@@ -1,0 +1,41 @@
+﻿.form {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+.form-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+    .form-item label {
+        flex: 0.5;
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-item input, .form-item select {
+        flex: 5;
+        outline: none;
+        border: 1px solid #ccc;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+.update_tin {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: #007bff;
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    }
+
+    .update_tin:hover {
+        background: #0062cc;
+        transition: 0.3s;
+    }
